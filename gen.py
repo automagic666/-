@@ -173,7 +173,7 @@ def a_record():
     return rec
 # print(a_record())
 
-with open('十六队违纪行为登记.csv', 'w') as file:
+with open('违纪行为登记-16.csv', 'w') as file:
     file.write('时间 , 学号, 姓名, 违纪事项, 摄像头, 上报者')
     for i in range(110):
         file.write('\n'+a_record())

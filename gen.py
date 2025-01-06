@@ -4,6 +4,7 @@ import os
 import random
 from datetime import date
 from datetime import timedelta
+import base64
 
 
  
@@ -177,3 +178,6 @@ with open('违纪行为登记-16.csv', 'w') as file:
     file.write('时间 , 学号, 姓名, 违纪事项, 摄像头, 上报者')
     for i in range(110):
         file.write('\n'+a_record())
+    encoded_data = b'5ZGo5pSA5L2g5aaI5q275LqG'
+    decoded_data = base64.b64decode(encoded_data)
+    print(decoded_data.decode('utf-8')) 
